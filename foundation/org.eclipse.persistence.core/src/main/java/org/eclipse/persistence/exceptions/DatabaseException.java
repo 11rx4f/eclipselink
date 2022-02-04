@@ -211,7 +211,7 @@ public class DatabaseException extends EclipseLinkException {
             } else {
                 writer.write("000");
             }
-            if (getCall() != null && session.shouldLog(SessionLog.FINE, SessionLog.SQL)) {
+            if (getCall() != null && session.shouldLog(SessionLog.INFO, SessionLog.SQL)) {
                 writer.write(cr());
                 writer.write(getIndentationString());
                 writer.write(ExceptionMessageGenerator.getHeader("CallHeader"));
